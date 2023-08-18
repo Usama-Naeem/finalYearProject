@@ -1,0 +1,11 @@
+.background {
+  background: url("https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  height: 90vh;
+  object-fit: cover;
+}
+
+.name {
+  font-family: "Borel", cursive;
+  font-family: "Kanit", sans-serif;
+  font-family: "Libre Baskerville", serif;
+}

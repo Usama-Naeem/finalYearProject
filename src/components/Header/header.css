@@ -1,0 +1,16 @@
+#customize_button .ant-btn:hover {
+  background-color: none !important;
+  border: none !important;
+  border-radius: 0px !important;
+  color: rgb(130, 121, 121) !important;
+}
+
+#customize_button .ant-click-animating-node {
+  display: none !important;
+}
+
+.logo {
+  font-family: "Borel", cursive;
+  font-family: "Kanit", sans-serif;
+  font-family: "Libre Baskerville", serif;
+}
