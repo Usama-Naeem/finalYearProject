@@ -1,6 +1,6 @@
 import { Form } from "antd";
 import React, { useState } from "react";
-import { updateBanquetManagementUser } from "../../graphql/mutations";
+// import { updateBanquetManagementUser } from "../../graphql/mutations";
 import FormInput from "../../shared/components/FormInput/FormInput";
 import ApiErrorMessage from "../../shared/components/ApiErrorMessage/ApiErrorMessage";
 import FormSubmitButton from "../../shared/components/FormSubmitButton/FormSubmitButton";
@@ -45,15 +45,15 @@ const ConfirmSignup = ({ email, password, role, id }) => {
           id,
           status: userStatuses.CONFIRMED,
         };
-        const userData = await updateUserDetails(
-          updateUserStatus,
-          updateBanquetManagementUser,
-        );
+        // const userData = await updateUserDetails(
+        //   updateUserStatus,
+        //   updateBanquetManagementUser,
+        // );
         // // saving the user data in localstorage
-        localStorage.setItem(
-          "userDynamo",
-          JSON.stringify(userData?.data?.updateBanquetManagementUser),
-        );
+        // localStorage.setItem(
+        //   "userDynamo",
+        //   JSON.stringify(userData?.data?.updateBanquetManagementUser),
+        // );
         navigate(DASHBOARD);
       }
     } catch (err) {

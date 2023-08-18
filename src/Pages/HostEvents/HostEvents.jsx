@@ -7,7 +7,7 @@ import FormTimePicker from "../../shared/components/TimePicker/TimePicker";
 import FormInputNumber from "../../shared/components/FormInputNumber/FormInputNumber";
 import { FormRule } from "../../shared/enum/formRules";
 import { createDataInDynamo } from "../../shared/api/dynamoApi";
-import { createBanquetManagementEvent } from "../../graphql/mutations";
+// import { createBanquetManagementEvent } from "../../graphql/mutations";
 import { TYPE } from "../../shared/constant/FormConstatnt";
 import { convertToAWSTime, formatDate } from "../../shared/utils";
 
@@ -36,7 +36,7 @@ const HostEvents = () => {
         bookingEndTime: convertToAWSTime(values.bookingTime[1]),
         type: TYPE,
       };
-      await createDataInDynamo(eventDetails, createBanquetManagementEvent);
+      // await createDataInDynamo(eventDetails, createBanquetManagementEvent);
       setIsLoading(false);
     } catch (error) {
       setIsLoading(false);

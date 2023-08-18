@@ -8,7 +8,7 @@ import { DASHBOARD, SIGNUP } from "../../shared/constant/pageRoutes";
 import { groupType } from "../../shared/enum/users";
 import { Auth } from "aws-amplify";
 import { getUserByEmail } from "../../shared/api/dynamoApi";
-import { listBanquetManagementUsers } from "../../graphql/queries";
+// import { listBanquetManagementUsers } from "../../graphql/queries";
 import {
   INVALID_CREDENTIALS,
   USER_NOT_EXIST,
@@ -46,14 +46,14 @@ const SigninForm = () => {
         return;
       }
       // Store user details in localstorage
-      const userDetails = await getUserByEmail(
-        values.email.toLowerCase(),
-        listBanquetManagementUsers,
-      );
-      localStorage.setItem(
-        "dynamoData",
-        JSON.stringify(userDetails.data.listBanquetManagementUsers.items[0]),
-      );
+      // const userDetails = await getUserByEmail(
+      //   values.email.toLowerCase(),
+      //   listBanquetManagementUsers,
+      // );
+      // localStorage.setItem(
+      //   "dynamoData",
+      //   JSON.stringify(userDetails.data.listBanquetManagementUsers.items[0]),
+      // );
       setIsLoading(false);
       navigate(DASHBOARD);
     } catch (error) {

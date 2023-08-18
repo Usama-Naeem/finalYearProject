@@ -22,7 +22,7 @@ import ConfirmSignup from "../ConfirmSignup/ConfirmSignup";
 import { roleOptions } from "../../shared/enum/users";
 import FormSelect from "../../shared/components/FormSelect/FormSelect";
 import { createDataInDynamo } from "../../shared/api/dynamoApi";
-import { createBanquetManagementUser } from "../../graphql/mutations";
+// import { createBanquetManagementUser } from "../../graphql/mutations";
 
 const SignupForm = () => {
   const [errorMessage, setErrorMessage] = useState(null);
@@ -59,11 +59,11 @@ const SignupForm = () => {
         role: values.role,
         type: TYPE,
       };
-      const createUser = await createDataInDynamo(
-        userDetails,
-        createBanquetManagementUser,
-      );
-      setId(createUser.data.createBanquetManagementUser.id);
+      // const createUser = await createDataInDynamo(
+      //   userDetails,
+      //   createBanquetManagementUser,
+      // );
+      // setId(createUser.data.createBanquetManagementUser.id);
       setIsLoading(false);
       setErrorMessage(null);
     } catch (error) {
